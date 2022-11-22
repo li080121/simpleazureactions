@@ -1,17 +1,16 @@
-# Configure the Azure provider
 terraform {
- required_providers {
-   azurerm = {
-     source  = "hashicorp/azurerm"
-     version = "~> 3.0.2"
-   }
- }
- 
- required_version = ">= 1.1.0"
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~> 3.0.2"
+    }
+  }
+
+  required_version = ">= 1.1.0"
 }
- 
+
 provider "azurerm" {
- features {}
+  features {}
 }
 
 terraform {
@@ -22,9 +21,8 @@ terraform {
     key                  = "simple.terraform.tfstate"
   }
 }
- 
+
 resource "azurerm_resource_group" "rg" {
- name     = "myTFResourceGroup99"
- location = "eastus"
+  name     = "myTFResourceGroup99"
+  location = "eastus"
 }
- 
